@@ -1,0 +1,97 @@
+#note-container{
+	margin: 2%;
+	padding-bottom: 4%;
+	box-sizing: border-box;
+}
+
+.note{
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	margin-top: 4%;
+	background: white;
+	border: 1px solid black;
+	border-radius: 5px;
+	box-shadow: 0px 2px 3px 0px #7b7b7b;
+	transition: all 0.1s;
+}
+
+.note-header{
+	position: relative;
+	display: block;
+	padding: 2%;
+	box-sizing: border-box;
+	width: 100%;
+	background-color: #E8E8E8;
+	border-bottom: 1px solid #A6A6A6;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.note-body{
+	position: relative;
+	display: block;
+	padding: 2%;
+	box-sizing: border-box;
+	width: 100%;
+	background-color: white;
+	height: 100px;
+}
+
+.note-body > p{
+	height: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.note-footer{
+	position: relative;
+	display: block;
+	padding: 2%;
+	box-sizing: border-box;
+	width: 100%;
+	background-color: #E8E8E8;
+	border-top: 1px solid #A6A6A6;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+/* large */
+@media only screen and (min-width: 751px) {
+    .note{
+		width: 22%;	
+    	margin-right: 4%;
+    }
+
+    .note:nth-child(4n) {
+    	margin-right: 0px;
+    }
+}
+
+/* medium */
+@media only screen and (max-width: 750px) {
+    .note{
+    	width: 30%;
+    	margin-right: 5%;
+    }
+
+    .note:nth-child(3n) {
+    	margin-right: 0px;
+    }
+}
+
+/* small */
+@media only screen and (max-width: 575px) {
+    .note{
+    	width: 50%;
+    	margin-right: 0px;
+    }
+}
+
+/* extra small */
+@media only screen and (max-width: 425px) {
+	.note{
+		width: 100%;
+		margin-right: 0px;
+	}
+}
