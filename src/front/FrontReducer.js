@@ -10,6 +10,51 @@ const frontReducer = (state = {
 			id: 2,
 			title: "Introduction to Noter",
 			body: "Welcome to Noter!"
+		},
+		{
+			id: 2,
+			title: "Introduction to Noter",
+			body: "Welcome to Noter!"
+		},
+		{
+			id: 2,
+			title: "Introduction to Noter",
+			body: "Welcome to Noter!"
+		},
+		{
+			id: 2,
+			title: "Introduction to Noter",
+			body: "Welcome to Noter!"
+		},
+		{
+			id: 2,
+			title: "Introduction to Noter",
+			body: "Welcome to Noter!"
+		},
+		{
+			id: 2,
+			title: "Introduction to Noter",
+			body: "Welcome to Noter!"
+		},
+		{
+			id: 2,
+			title: "Introduction to Noter",
+			body: "Welcome to Noter!"
+		},
+		{
+			id: 2,
+			title: "Introduction to Noter",
+			body: "Welcome to Noter!"
+		},
+		{
+			id: 2,
+			title: "Introduction to Noter",
+			body: "Welcome to Noter!"
+		},
+		{
+			id: 2,
+			title: "Introduction to Noter",
+			body: "Welcome to Noter!"
 		}
 	]
 }, action) => {

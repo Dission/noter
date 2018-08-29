@@ -11,6 +11,7 @@ import './index.css';
 
 // containers
 import Front from './front/Front';
+import NewNote from './newNote/NewNote';
 
 ReactDOM.render(
 	<Provider store={ store }>

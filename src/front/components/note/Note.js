@@ -1,4 +1,8 @@
+// react
 import React from 'react';
+
+// css
+import './note.css';
 
 export default function Note(props) {
 	return (

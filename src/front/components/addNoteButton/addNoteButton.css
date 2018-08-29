@@ -1,0 +1,22 @@
+#addNoteButton{
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 80px;
+	height: 80px;
+	background-color: white;
+	border:1px solid black;
+	border-radius: 100%;
+	transition: all 0.2s;
+	cursor: pointer;
+	box-shadow: 0px 0px 20px 0px #656565;
+	z-index: 999;
+	outline: 0px;
+}
+
+#addNoteButton:hover{
+	background-color: grey;
+	color: white;
+	border-color: #004aa7;
+	box-shadow: 0px 0px 20px 0px #004aa7;
+}

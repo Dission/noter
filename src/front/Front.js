@@ -8,23 +8,25 @@ import { connect } from 'react-redux';
 import './front.css';
 
 // components
-import Note from './components/Note';
+import AddNoteButton from './components/addNoteButton/AddNoteButton';
+import Note from './components/note/Note';
 
 class Front extends React.Component {
-	noteClick = note_id => {
+	onAddNote =() => {
+		console.log('add note');
+	}
+
+	onNoteClick = note_id => {
 		console.log('note clicked, id:', note_id);
 	}
 
 	render() {
 		return (
-			<div id="note-container">
-
-			{
-				this.props.FrontReducer.notes.map((note, key) =>
-					<Note data={ note } key={ key } onClick={ this.noteClick }/>
-				)
-			}
-
+			<div>
+				<AddNoteButton onClick={ this.onAddNote }/>
+				<div id="note-container">
+					{this.props.FrontReducer.notes.map((note, key) => <Note data={ note } key={ key } onClick={ this.onNoteClick }/>)}
+				</div>
 			</div>
 		);
 	}
