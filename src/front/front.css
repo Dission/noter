@@ -12,11 +12,16 @@
 	background: white;
 	border: 1px solid black;
 	border-radius: 5px;
-	box-shadow: 0px 2px 3px 0px #7b7b7b;
-	transition: all 0.1s;
+	box-shadow: 0px 0px 20px 0px #656565;
+	transition: all 0.1s, transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+	cursor: pointer;
 }
 
-.note-header{
+.note:hover{
+	border-color: #004aa7;
+}
+
+.note-title{
 	position: relative;
 	display: block;
 	padding: 2%;
@@ -39,9 +44,12 @@
 }
 
 .note-body > p{
-	height: 100%;
-	overflow: hidden;
+	display: block; /* or inline-block */
 	text-overflow: ellipsis;
+	word-wrap: break-word;
+	overflow: hidden;
+	max-height: 5.4em;
+	line-height: 1.8em;
 }
 
 .note-footer{
@@ -56,22 +64,40 @@
 	border-bottom-right-radius: 5px;
 }
 
-/* large */
-@media only screen and (min-width: 751px) {
+/* extra small - 1 per row */
+@media screen and (min-width: 0px) {
     .note{
-		width: 22%;	
+		width: 100%;
+		margin-right: 0px;
+	}
+}
+
+/* small - 2 per row */
+@media screen and (min-width: 426px) {
+    .note{
+    	width: 48%;
     	margin-right: 4%;
     }
 
-    .note:nth-child(4n) {
+    .note:nth-child(2n){
     	margin-right: 0px;
     }
+
+    .note:hover{
+		transform: scale(1.05);
+		border-color: #004aa7;
+		box-shadow: 0px 0px 20px 0px #004aa7;
+	}
 }
 
-/* medium */
-@media only screen and (max-width: 750px) {
+/* medium - 3 per row */
+@media screen and (min-width: 576px) {
     .note{
     	width: 30%;
+    	margin-right: 5%;
+    }
+
+    .note:nth-child(2n){
     	margin-right: 5%;
     }
 
@@ -80,18 +106,46 @@
     }
 }
 
-/* small */
-@media only screen and (max-width: 575px) {
+/* large - 4 per row */
+@media screen and (min-width: 751px) {
     .note{
-    	width: 50%;
+		width: 22%;	
+    	margin-right: 4%;
+    }
+
+    .note:nth-child(2n){
+    	margin-right: 4%;
+    }
+
+    .note:nth-child(3n) {
+    	margin-right: 4%;
+    }
+
+    .note:nth-child(4n) {
     	margin-right: 0px;
     }
 }
 
-/* extra small */
-@media only screen and (max-width: 425px) {
-	.note{
-		width: 100%;
-		margin-right: 0px;
-	}
+/* extra large - 6 per row */
+@media screen and (min-width: 1501px) {
+    .note{
+		width: 15%;	
+    	margin-right: 2%;
+    }
+
+    .note:nth-child(2n){
+    	margin-right: 2%;
+    }
+
+    .note:nth-child(3n) {
+    	margin-right: 2%;
+    }
+
+    .note:nth-child(4n) {
+    	margin-right: 2%;
+    }
+
+    .note:nth-child(6n){
+    	margin-right: 0px;
+    }
 }
